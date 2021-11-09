@@ -6,15 +6,17 @@ function App() {
       <nav>
         <section>
           <h1>Todos</h1>
-
-          <div className="navContent">
-            <div className="navLinks"></div>
-          </div>
         </section>
       </nav>
-      <section>
-        <h2>Welcome to the Redux Fundamentals example app!</h2>
-      </section>
+      <main>
+        <section className="medium-container">
+          <div className="todoapp">
+            {/* <Header /> */}
+            {/* <TodoList /> */}
+            {/* <Footer /> */}
+          </div>
+        </section>
+      </main>
     </div>
   )
 }
