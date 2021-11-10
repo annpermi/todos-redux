@@ -14,6 +14,7 @@ if (persistedTodosString) {
 } */
 
 //Middleware
+
 // const middlewareEnhancer = applyMiddleware(print1, print2, print3)
 const composedEnhancer = composeWithDevTools(
   // EXAMPLE: Add whatever middleware you actually want to use here
