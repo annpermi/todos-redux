@@ -1,4 +1,7 @@
 import React from 'react'
+import TodoList from './features/todos/TodoList'
+import Header from './features/header/Header'
+import Footer from './features/footer/Footer'
 
 function App() {
   return (
@@ -10,10 +13,11 @@ function App() {
       </nav>
       <main>
         <section className="medium-container">
+          <h2>Let's create your Todo List</h2>
           <div className="todoapp">
-            {/* <Header /> */}
-            {/* <TodoList /> */}
-            {/* <Footer /> */}
+            <Header />
+            <TodoList />
+            <Footer />
           </div>
         </section>
       </main>
