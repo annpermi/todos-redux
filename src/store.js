@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducer'
-// import { print1, print2, print3 } from './exampleAddons/middleware'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
 
 /* createStore can also accept a preloadedState value as its second argument. You could use this to add initial data when the store is created, such as values that were included in an HTML page sent from the server, or persisted in localStorage and read back when the user visits the page again, like this: */
 /* let preloadedState
@@ -15,16 +15,10 @@ if (persistedTodosString) {
 
 //Middleware
 
-// const middlewareEnhancer = applyMiddleware(print1, print2, print3)
-const composedEnhancer = composeWithDevTools(
-  // EXAMPLE: Add whatever middleware you actually want to use here
-  applyMiddleware()
-  //   applyMiddleware(print1, print2, print3)
-  // other store enhancers if any
-)
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 
 const store = createStore(
-  rootReducer /* preloadedState */,
+  rootReducer,
   /* middlewareEnhancer */ composedEnhancer
 )
 

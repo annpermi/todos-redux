@@ -5,8 +5,9 @@ import App from './App'
 import store from './store'
 import './api/server'
 import { Provider } from 'react-redux'
+import { fetchTodos } from './features/todos/todosSlice'
 
-// Log the initial state
+/* // Log the initial state
 console.log('Initial state: ', store.getState())
 
 // Every time the state changes, log it
@@ -35,7 +36,9 @@ unsubscribe()
 // Dispatch one more action to see what happens
 
 // store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' })
+ */
 
+store.dispatch(fetchTodos())
 ReactDOM.render(
   // Render a `<Provider>` around the entire `<App>`,
   // and pass the Redux store to as a prop
